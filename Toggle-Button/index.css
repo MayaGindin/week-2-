@@ -1,0 +1,162 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --title-color: hsl(234, 14%, 74%);
+  --annuallu-monthly-color: hsl(234, 14%, 74%);
+  --botton-color: hsl(237, 63%, 64%);
+}
+html {
+  background-color: rgb(236, 223, 241);
+  font-family: "Sacramento", cursive;
+  background: url("./images/bg-top.svg") right top no-repeat,
+    url("./images/bg-bottom.svg") left bottom no-repeat;
+  height: 100vh;
+}
+.logo {
+  left: 1550px;
+  position: relative;
+}
+body {
+  align-items: center;
+}
+.header {
+  display: flex;
+  color: var(--title-color);
+  justify-content: center;
+  margin-top: 50px;
+}
+.annually-monthly {
+  display: flex;
+  position: relative;
+  color: var(--annuallu-monthly-color);
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+.check {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: var(--botton-color);
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+input[type="checkbox"]:checked ~ .check {
+  background: #fff;
+  box-shadow: 0 0 0 120px var(--botton-color);
+}
+.check:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input[type="checkbox"]:checked ~ .check::before {
+  transform: translateX(-10px);
+}
+.check:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--botton-color);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input[type="checkbox"]:checked + .counteiner-cards :checked ~ .card-price::after {
+  content: 111;
+}
+.counteiner-cards {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bolder;
+}
+.card {
+  margin-top: 30px;
+}
+.card3 {
+  margin-top: 30px;
+}
+.whitecard {
+  width: 350px;
+  height: 400px;
+  background-color: white;
+  color: var(--title-color);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgb(199, 191, 191);
+}
+.card-type {
+  font-size: 22px;
+}
+.card-price {
+  font-size: 55px;
+}
+.card-options {
+  font-size: 18px;
+  width: 90%;
+}
+.card-btn {
+  background-color: var(--botton-color);
+  display: inline-block;
+  padding: 10px 70px;
+  margin: 20px;
+}
+.card2 {
+  width: 450px;
+  height: 450px;
+  background-color: var(--botton-color);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0.3);
+}
+.card-2-type {
+  font-size: 22px;
+}
+.card-2-price {
+  font-size: 55px;
+}
+.card-options-2 {
+  font-size: 18px;
+  width: 90%;
+}
+.cars-2-btn {
+  display: inline-block;
+  padding: 10px 70px;
+  margin: 20px;
+}
+.card-3-type {
+  font-size: 22px;
+}
+.card-3-price {
+  font-size: 55px;
+}
+.card-3-options {
+  font-size: 18px;
+  width: 90%;
+}
+.card-3-btn {
+  background-color: var(--botton-color);
+  display: inline-block;
+  padding: 10px 70px;
+  margin: 20px;
+}
+.btn {
+  border-radius: 20px;
+}
+
